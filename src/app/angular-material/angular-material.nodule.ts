@@ -5,5 +5,7 @@ import { NgModule } from "@angular/core";
   exports: []
 })
 export class AngularMaterialModule {
-
+  constructor() {
+    console.log("AngularMaterialModule loaded.");
+  }
 }
