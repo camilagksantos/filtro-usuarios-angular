@@ -2,79 +2,79 @@
     <h1 class="titleSpan">Detalhes do Usuário</h1>
     <mat-list>
         <mat-list-item>
-            <span class="attributeSpan">Nome: </span><span class="valueSpan">Harry Potter</span>
+            <span class="attributeSpan">Nome: </span><span class="valueSpan">{{ user.nome | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">E-mail: </span><span class="valueSpan">"harry.potterhogwarts.com"</span>
+            <span class="attributeSpan">E-mail: </span><span class="valueSpan">{{ user.email | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Senha: </span><span class="valueSpan">ExpectoPatronum123</span>
+            <span class="attributeSpan">Senha: </span><span class="valueSpan">{{ user.senha | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Idade: </span><span class="valueSpan">24</span>
+            <span class="attributeSpan">Idade: </span><span class="valueSpan">{{ user.idade | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Endereço: </span><span class="valueSpan">...</span>
+            <span class="attributeSpan">Endereço: </span><span class="valueSpan">{{ user.endereco | address | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
 
         <mat-list-item >
-            <span class="attributeSpan" >Telefone: </span><span class="valueSpan">+44 1234 567890</span>
+            <span class="attributeSpan" >Telefone: </span><span class="valueSpan">{{ user.telefone | phone | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
 
         <mat-list-item>
-            <span class="attributeSpan">Função: </span><span class="valueSpan">Auror</span>
+            <span class="attributeSpan">Função: </span><span class="valueSpan">{{ user.funcao | dashIfEmpty }}</span>
         </mat-list-item>
         
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Data do Cadastro: </span><span class="valueSpan">2020-06-01T14:30:00Z</span>
+            <span class="attributeSpan">Data do Cadastro: </span><span class="valueSpan">{{ user.dataCadastro | date: 'dd/MM/yyyy' | dashIfEmpty }}</span>
         </mat-list-item>
         
         <mat-divider></mat-divider>
 
         <mat-list-item>
-            <span class="attributeSpan">Status Ativo: </span><span class="valueSpan">True</span>
+            <span class="attributeSpan">Status Ativo: </span><span class="valueSpan">{{ user.ativo | status | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Status Online: </span><span class="valueSpan">True</span>
+            <span class="attributeSpan">Status Online: </span><span class="valueSpan">{{ user.status.online | status | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Status Verificado: </span><span class="valueSpan">True</span>
+            <span class="attributeSpan">Status Verificado: </span><span class="valueSpan">{{ user.status.verificado | status | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Status Assinatura Ativa: </span><span class="valueSpan">True</span>
+            <span class="attributeSpan">Status Assinatura Ativa: </span><span class="valueSpan">{{ user.status.assinaturaAtiva | status | dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         
         <mat-list-item>
-            <span class="attributeSpan">Status Ultimo Acesso: </span><span class="valueSpan">2025-02-25T10:45:00Z</span>
+            <span class="attributeSpan">Status Ultimo Acesso: </span><span class="valueSpan">{{ user.status.ultimoAcesso | date: 'dd/MM/yyyy' | dashIfEmpty }}</span>
         </mat-list-item>
     </mat-list>
 </div>
