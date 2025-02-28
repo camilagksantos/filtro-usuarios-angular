@@ -17,7 +17,7 @@ export class AddressPipe implements PipeTransform {
       address.numero === null || address.numero === undefined;
     
     if (INVALID_ADDRESS) {
-      return 'Endereço indisponível ou inválido';
+      return '-';
     }
 
     return `${address.rua}, ${address.numero}, ${address.cidade}, ${address.estado} - ${address.pais}`;

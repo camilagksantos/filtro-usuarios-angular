@@ -11,12 +11,12 @@ export class PhonePipe implements PipeTransform {
     
     // Se o valor for "N/A", retorna ele mesmo sem formatação
     if (phone === 'N/A') {
-      return 'N/A';
+      return '-';
     }
     
     // Se não for uma string ou estiver vazio, retornar vazio
     if (!phone) {
-      return '';
+      return '-';
     }
     
     try {
@@ -125,7 +125,7 @@ export class PhonePipe implements PipeTransform {
       return phoneStr;
     } catch (error) {
       console.error('Erro ao formatar telefone:', error);
-      return phone || '';
+      return phone || '-';
     }
   }
 }

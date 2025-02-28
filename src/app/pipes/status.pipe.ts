@@ -10,7 +10,7 @@ export class StatusPipe implements PipeTransform {
     const INVALID_STATUS = status === undefined || status === null;
 
     if (INVALID_STATUS) {
-      return "N/A";
+      return "-";
     }
 
     return status ? "Sim" : "Não";
